@@ -1,0 +1,9 @@
+footer {
+  text-align: center;
+  padding: var(--space-4);
+  background: var(--color-surface-header);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-base);
+  letter-spacing: 0.03em;
+  box-shadow: var(--shadow-default);
+}

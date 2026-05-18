@@ -1,0 +1,66 @@
+/* MAIN */
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  grid-area: main;
+}
+
+.main h2 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+/* CARD */
+.card {
+  background: var(--color-surface-card);
+  border-radius: var(--radius-default);
+  overflow: hidden;
+  transition: 0.3s;
+  text-align: left;
+  box-shadow: var(--shadow-default);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  background: #222;
+}
+
+.card h3 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  margin: var(--space-4) var(--space-4) var(--space-2);
+  color: var(--color-accent);
+}
+
+.card p {
+  color: var(--color-text-secondary);
+  margin: 0 var(--space-4) var(--space-2);
+  font-size: var(--font-size-base);
+}
+
+.card p:last-child {
+  margin-bottom: var(--space-4);
+}
+
+.card:hover,
+.card:focus {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: var(--shadow-hover);
+}

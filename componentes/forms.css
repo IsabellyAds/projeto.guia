@@ -1,0 +1,69 @@
+/* FILTROS */
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.filtros input {
+  display: none;
+}
+
+.filtros label {
+  padding: var(--space-2) var(--space-4);
+  border-radius: 2rem;
+  background: var(--color-surface-card);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  border: 1.5px solid var(--color-border-default);
+  font-size: var(--font-size-base);
+  transition: background 0.2s, color 0.2s;
+}
+
+.filtros label:hover,
+.filtros label:focus {
+  background: var(--color-action-primary);
+  color: var(--color-text-primary);
+}
+
+input:checked + label {
+  background: var(--color-action-primary);
+  color: var(--color-text-primary);
+}
+
+/* CADASTRO */
+.cadastro {
+  background: var(--color-surface-card);
+  padding: var(--space-8);
+  border-radius: var(--radius-default);
+  box-shadow: var(--shadow-default);
+}
+
+.cadastro form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.cadastro input {
+  padding: var(--space-3);
+  border-radius: var(--radius-small);
+  border: 1px solid var(--color-border-default);
+  background: var(--color-surface-body);
+  color: var(--color-text-primary);
+}
+
+.cadastro button {
+  padding: var(--space-3);
+  border: none;
+  border-radius: var(--radius-small);
+  background: var(--color-action-primary);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.cadastro button:hover {
+  background: var(--color-action-primary-hover);
+}

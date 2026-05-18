@@ -1,10 +1,10 @@
 <!DOCTYPE html> 
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guia de Cinema</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./css/styles.css">
   <!-- Material Symbols -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <style>
@@ -37,26 +37,21 @@
 
 
 <header>
-  <h1 tabindex="0">
-    <span class="material-symbols-outlined main-icon" tabindex="0">movie</span>
-    Guia de Cinema
-  </h1>
+ 
+  <button class="theme-toggle" onclick="toggleTheme()">
+  Alternar Tema
+</button>
+
 </header>
 
 
-<nav>
-  <ul>
-    <li><a href="#" tabindex="0">Início</a></li>
-    <li><a href="#" tabindex="0">Filmes</a></li>
-  </ul>
-</nav>
+<nav aria-label="Navegação principal">
 
 <div class="layout">
 
   <!-- SIDEBAR -->
   <aside class="sidebar">
-    <h2 tabindex="0"><span class="material-symbols-outlined" tabindex="0">theater_comedy</span> Gêneros</h2>
-    <ul>
+    
       <li tabindex="0">Terror</li>
       <li tabindex="0">Comédia</li>
       <li tabindex="0">Drama</li>
@@ -103,7 +98,8 @@
 
       <!-- DRAMA -->
       <article class="card drama" tabindex="0">
-        <img src="https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/95/59/60/20417256.jpg" tabindex="0">
+      <article class="card drama" tabindex="0"> <img src="https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/95/59/60/20417256.jpg" tabindex="0"> <h3 tabindex="0">Harry Potter e a Pedra Filosofal</h3> <p tabindex="0">Um garoto descobre que é um bruxo e entra em Hogwarts.</p> <p tabindex="0">⭐⭐⭐⭐⭐</p> </article>
+>
         <h3 tabindex="0">Harry Potter e a Pedra Filosofal</h3>
         <p tabindex="0">Um garoto descobre que é um bruxo e entra em Hogwarts.</p>
         <p tabindex="0">⭐⭐⭐⭐⭐</p>
@@ -161,11 +157,17 @@
     </ol>
   </aside>
 
+
 </div>
 
 <footer>
-  <p tabindex="0">© 2026</p>
+  <p>
+    © 2026 Guia de Cinema.
+    Todos os direitos reservados.
+  </p>
 </footer>
+
+<script src="./js/main.js"></script>
 
 </body>
 </html>

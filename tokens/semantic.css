@@ -1,0 +1,28 @@
+:root {
+
+  --color-surface-body: var(--_neutral-900);
+  --color-surface-card: var(--_neutral-800);
+
+  --color-action-primary: var(--_red-500);
+  --color-action-primary-hover: var(--_red-700);
+
+  --color-text-primary: var(--_white);
+
+}
+
+/* =========================================
+   LIGHT MODE
+========================================= */
+
+[data-theme="light"] {
+
+  --color-surface-body: #f5f5f5;
+  --color-surface-card: #ffffff;
+  --color-surface-header: #e5e5e5;
+
+  --color-text-primary: #181a1b;
+  --color-text-secondary: #555555;
+
+  --color-border-default: #d1d1d1;
+
+}
