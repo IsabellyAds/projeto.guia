@@ -1,12 +1,12 @@
-@import "./tokens/primitives.css";
+@import "./tokens/primitivos.css";
 @import "./tokens/semantic.css";
 @import "./tokens/spacing.css";
 @import "./tokens/typography.css";
 
-@import "./components/navbar.css";
 @import "./components/card.css";
 @import "./components/footer.css";
 @import "./components/forms.css";
-
-@import "./layout.css";
 @import "./components/icons.css";
+@import "./components/layout.css";
+@import "./components/navbar.css";
+
