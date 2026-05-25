@@ -10,9 +10,43 @@ body {
 header {
   background: var(--color-surface-header);
   color: var(--color-action-primary);
-  text-align: center;
   padding: var(--space-8) var(--space-4) var(--space-6);
   box-shadow: var(--shadow-default);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.menu-toggle,
+.theme-toggle {
+  padding: var(--space-2) var(--space-4);
+  border: none;
+  border-radius: var(--radius-small);
+  background: var(--color-action-primary);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.menu-toggle:hover,
+.theme-toggle:hover,
+.menu-toggle:focus,
+.theme-toggle:focus {
+  background: var(--color-action-primary-hover);
+}
+
+header h1 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-extra-bold);
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
 }
 
 header h1 {

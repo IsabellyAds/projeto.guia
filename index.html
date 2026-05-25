@@ -7,59 +7,39 @@
   <link rel="stylesheet" href="./styles.css">
   <!-- Material Symbols -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-  <style>
-    .material-symbols-outlined {
-      font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 48;
-      vertical-align: middle;
-      font-size: 2rem;
-      /* padrão para ícones menores */
-    }
-    .material-symbols-outlined.main-icon {
-      font-size: 3.2rem;
-      /* ícone principal maior */
-    }
-    @media (max-width: 600px) {
-      .material-symbols-outlined.main-icon {
-        font-size: 2.2rem;
-      }
-      header h1 {
-        font-size: 1.5rem !important;
-      }
-    }
-  </style>
 </head>
 
 <body>
 
 
 <header>
- 
-  <button class="theme-toggle" onclick="toggleTheme()">
-    <span class="material-symbols-outlined">contrast</span>
-  </button>
+  <div class="header-inner">
+    <button class="menu-toggle" onclick="toggleMenu()" aria-expanded="false" aria-controls="sidebar" aria-label="Abrir menu">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
 
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Alternar tema">
+      <span class="material-symbols-outlined">contrast</span>
+    </button>
+  </div>
 </header>
 
+<aside class="sidebar" id="sidebar" aria-label="Navegação de gêneros">
+  <button class="sidebar-close" onclick="toggleMenu()" aria-label="Fechar menu">
+    <span class="material-symbols-outlined">close</span>
+  </button>
+  <h2>Gêneros</h2>
+  <ul>
+    <li><button type="button">Terror</button></li>
+    <li><button type="button">Comédia</button></li>
+    <li><button type="button">Drama</button></li>
+    <li><button type="button">Documentário</button></li>
+  </ul>
+</aside>
 
-<nav aria-label="Navegação principal">
+<div class="backdrop" id="backdrop" onclick="closeMenu()" aria-hidden="true"></div>
 
 <div class="layout">
-
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
-    
-      <li tabindex="0">Terror</li>
-      <li tabindex="0">Comédia</li>
-      <li tabindex="0">Drama</li>
-      <li tabindex="0">Documentário</li>
-    </ul>
-  </aside>
-
-  <!-- MAIN -->
   <main class="main">
 
     <h2 tabindex="0"><span class="material-symbols-outlined" tabindex="0">movie</span> Filmes</h2>
@@ -120,6 +100,27 @@
         <p tabindex="0">Em Invocação do Mal 2, os investigadores paranormais Ed (Patrick Wilson) e Lorraine (Vera Farmiga) desembarcam em Londres, Inglaterra, para ajudar uma família atormentada.</p>
       </article>
 
+      <article class="card terror" tabindex="0">
+        <img src="./assents/obsessao.jpg" tabindex="0" alt="Obsessão img">
+        <h3 tabindex="0">Obsessão</h3>
+        <p tabindex="0">⭐⭐⭐☆☆</p>
+        <p tabindex="0">Em Invocação do Mal 2, os investigadores paranormais Ed (Patrick Wilson) e Lorraine (Vera Farmiga) desembarcam em Londres, Inglaterra, para ajudar uma família atormentada.</p>
+      </article>
+
+      <article class="card terror" tabindex="0">
+        <img src="./assents/download.jpg" tabindex="0" alt="Aranhaverso">
+        <h3 tabindex="0">Aranhaverso</h3>
+        <p tabindex="0">⭐⭐⭐⭐⭐</p>
+        <p tabindex="0">Em Invocação do Mal 2, os investigadores paranormais Ed (Patrick Wilson) e Lorraine (Vera Farmiga) desembarcam em Londres, Inglaterra, para ajudar uma família atormentada.</p>
+      </article>
+
+      <article class="card terror" tabindex="0">
+        <img src="./assents/tinker-bell.webp" tabindex="0" alt="Tinker Bell img">
+        <h3 tabindex="0">Tinker Bell (2008)</h3>
+        <p tabindex="0">⭐⭐⭐⭐☆</p>
+        <p tabindex="0">Uma fada descobre seu talento especial no mundo mágico.</p>
+      </article>
+
       <!-- DOCUMENTÁRIO -->
       <article class="card documentario" tabindex="0">
         <img src="./assents/amazonia.jpg" tabindex="0" alt="Amazônia img">
@@ -146,15 +147,6 @@
 
   </main>
 
-  <!-- ASIDE -->
-  <aside class="extra" tabindex="0">
-    <h2 tabindex="0"><span class="material-symbols-outlined" tabindex="0">arrow_shape_up</span> Top 3</h2>
-    <ol>
-      <li tabindex="0">Interestelar</li>
-      <li tabindex="0">Harry Potter</li>
-      <li tabindex="0">Tinker Bell</li>
-    </ol>
-  </aside>
 
 
 </div>

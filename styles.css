@@ -1,12 +1,14 @@
-@import "./tokens/primitivos.css";
-@import "./tokens/semantic.css";
-@import "./tokens/spacing.css";
-@import "./tokens/typography.css";
+@layer tokens, components;
 
-@import "./components/card.css";
-@import "./components/footer.css";
-@import "./components/forms.css";
-@import "./components/icons.css";
-@import "./components/layout.css";
-@import "./components/navbar.css";
+@import "./tokens/primitivos.css" layer(tokens);
+@import "./tokens/semantic.css" layer(tokens);
+@import "./tokens/spacing.css" layer(tokens);
+@import "./tokens/typography.css" layer(tokens);
+
+@import "./components/card.css" layer(components);
+@import "./components/footer.css" layer(components);
+@import "./components/forms.css" layer(components);
+@import "./components/icons.css" layer(components);
+@import "./components/layout.css" layer(components);
+@import "./components/navbar.css" layer(components);
 
