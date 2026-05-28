@@ -21,6 +21,18 @@ header {
   gap: var(--space-2);
 }
 
+.header-title {
+  font-family: Merriweather, serif;
+  flex: 1;
+  text-align: center;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-xl);
+}
+
 .menu-toggle,
 .theme-toggle {
   padding: var(--space-2) var(--space-4);
