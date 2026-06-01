@@ -10,7 +10,7 @@ body {
 header {
   background: var(--color-surface-header);
   color: var(--color-action-primary);
-  padding: var(--space-8) var(--space-4) var(--space-6);
+  padding: var(--space-4);
   box-shadow: var(--shadow-default);
 }
 
@@ -18,19 +18,38 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-2);
+  gap: var(--space-4);
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-.header-title {
-  font-family: Merriweather, serif;
-  flex: 1;
-  text-align: center;
-  margin: 0;
+.header-nav {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: var(--space-2);
-  font-size: var(--font-size-xl);
+  justify-content: flex-end;
+  gap: var(--space-4);
+  margin: 0;
+}
+
+.header-nav a {
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: 1rem;
+  text-decoration: none;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-small);
+  transition: background 0.2s, color 0.2s;
+}
+
+.header-nav a:hover,
+.header-nav a:focus {
+  background: var(--color-action-primary);
+  color: var(--color-text-primary);
+}
+
+.nav-separator {
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-bold);
 }
 
 .menu-toggle,
@@ -49,26 +68,6 @@ header {
 .menu-toggle:focus,
 .theme-toggle:focus {
   background: var(--color-action-primary-hover);
-}
-
-header h1 {
-  font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-extra-bold);
-  letter-spacing: 0.04em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-2);
-}
-
-header h1 {
-  font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-extra-bold);
-  letter-spacing: 0.04em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-2);
 }
 
 /* NAV */
@@ -97,30 +96,4 @@ nav a:hover,
 nav a:focus {
   background: var(--color-action-primary);
   color: var(--color-text-primary);
-}
-
-.theme-toggle {
-
-  margin-top: var(--space-4);
-
-  padding: var(--space-2) var(--space-4);
-
-  border: none;
-
-  border-radius: var(--radius-small);
-
-  background: var(--color-action-primary);
-
-  color: var(--color-text-primary);
-
-  cursor: pointer;
-
-  transition: 0.2s;
-
-}
-
-.theme-toggle:hover {
-
-  background: var(--color-action-primary-hover);
-
 }

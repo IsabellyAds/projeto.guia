@@ -18,11 +18,15 @@
       <span class="material-symbols-outlined">menu</span>
     </button>
 
-    <h2 class="header-title"><span class="material-symbols-outlined">movie</span> FILMES</h2>
-
-    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Alternar tema">
-      <span class="material-symbols-outlined">contrast</span>
-    </button>
+    <nav class="header-nav">
+      <a href="#inicio">Início</a>
+      <span class="nav-separator">|</span>
+      <a href="#filmes">Filmes</a>
+      <span class="nav-separator">|</span>
+      <a href="#series">Séries</a>
+      <span class="nav-separator">|</span>
+      <a href="#contato">Contato</a>
+    </nav>
   </div>
 </header>
 
@@ -37,6 +41,9 @@
     <li><button type="button">Drama</button></li>
     <li><button type="button">Documentário</button></li>
   </ul>
+  <button class="theme-toggle" onclick="toggleTheme()" aria-label="Alternar tema">
+    <span class="material-symbols-outlined">contrast</span>
+  </button>
 </aside>
 
 <div class="backdrop" id="backdrop" onclick="closeMenu()" aria-hidden="true"></div>
