@@ -15,6 +15,8 @@
 }
 
 .card {
+  position: relative; /* necessário para posicionar o preview */
+  overflow: visible; /* permitir overflow do preview */
   background: var(--color-surface-card);
   border-radius: var(--radius-default);
   overflow: hidden;
@@ -25,6 +27,46 @@
   flex-direction: column;
   min-height: 100%;
   max-width: 100%;
+}
+
+/* wrapper para imagem + vídeo */
+.card-media { position: relative; }
+
+/* preview em vídeo (inicialmente oculto) */
+.card .preview {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 240px;
+  height: 135px;
+  border-radius: var(--radius-small);
+  box-shadow: var(--shadow-hover);
+  object-fit: cover;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-6px) scale(0.98);
+  transition: opacity 200ms ease, transform 200ms ease, visibility 0ms linear 200ms;
+  pointer-events: none;
+  z-index: 12;
+}
+
+/* mostra preview ao hover / foco (somente CSS) */
+.card:hover .preview,
+.card:focus-within .preview {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition-delay: 0ms;
+}
+
+/* esconder preview em telas pequenas */
+@media (max-width: 768px) {
+  .card .preview { display: none; }
+}
+
+/* maior no desktop largo */
+@media (min-width: 1200px) {
+  .card .preview { width: 320px; height: 180px; }
 }
 
 .card img {
