@@ -2,8 +2,8 @@
 .filtros {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-2);
-  margin-bottom: var(--space-4);
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
 }
 
 .filtros input {
@@ -35,9 +35,12 @@ input:checked + label {
 /* CADASTRO */
 .cadastro {
   background: var(--color-surface-card);
-  padding: var(--space-8);
+  padding: var(--space-6);
   border-radius: var(--radius-default);
   box-shadow: var(--shadow-default);
+  max-width: 760px;
+  width: min(100%, 760px);
+  margin: 0 auto var(--space-8);
 }
 
 .cadastro form {
@@ -47,6 +50,7 @@ input:checked + label {
 }
 
 .cadastro input {
+  width: 100%;
   padding: var(--space-3);
   border-radius: var(--radius-small);
   border: 1px solid var(--color-border-default);
@@ -55,15 +59,24 @@ input:checked + label {
 }
 
 .cadastro button {
+  width: 100%;
   padding: var(--space-3);
   border: none;
   border-radius: var(--radius-small);
   background: var(--color-action-primary);
   color: var(--color-text-primary);
   cursor: pointer;
-  transition: 0.2s;
+  transition: background 0.2s ease;
 }
 
-.cadastro button:hover {
+.cadastro button:hover,
+.cadastro button:focus {
   background: var(--color-action-primary-hover);
+}
+
+@media (max-width: 768px) {
+  .cadastro {
+    padding: var(--space-5);
+    margin-bottom: var(--space-6);
+  }
 }
