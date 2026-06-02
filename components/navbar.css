@@ -15,6 +15,7 @@ header {
 }
 
 .header-inner {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -22,6 +23,16 @@ header {
   gap: var(--space-2);
   max-width: 1400px;
   margin: 0 auto;
+}
+
+.header-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  color: red;
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
 }
 
 .header-nav {
